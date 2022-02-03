@@ -1,0 +1,158 @@
+/* Je modifie mon fichier css */
+
+.wrapper {
+    display: flex;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+.left-section {
+    background-image: url(../images/nicole.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+.right-section {
+    background-color: #FFF;
+}
+
+/* Les 2 sections feront chacune la moité de la page. */
+.left-section, .right-section {
+    width: 50%;
+}
+
+.left-section a {
+    color: #FFF;
+    text-decoration: none;
+}
+
+.left-header {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    width: 130px;
+    padding-left: 40px;
+    font-weight: bold;
+    line-height: 1;
+    background-image: url(../images/onews.svg);
+    background-repeat: no-repeat;
+    background-size: 2rem;
+    background-position: 0 5px;
+    margin-top: 2rem;
+}
+
+.left-section h1 {
+    font-size: 1.3rem;
+}
+
+.left-section h1 span {
+    font-size: 1rem;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.left-footer {
+    align-self: flex-end;
+}
+
+.left-footer li {
+    display: inline;
+    font-size: 0.9rem;
+}
+
+aside {
+    background: rgba(255,255,255,0.25);
+    color: #FFF;
+    text-align: right;
+    padding: 1rem;
+}
+
+aside p {
+    font-size: .8rem;
+}
+
+.right-section main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+article {
+    width: 50%;
+    padding: 1.5rem;
+    border-top: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
+}
+
+.right-section header {
+    background-color: #f9f9f9;
+    padding: 0.5rem 1rem;
+}
+
+.badge {
+    text-transform: uppercase;
+    color: #FFF;
+    font-weight: bold;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.7rem;
+    border-radius: 5px;
+}
+
+.post-work .badge {
+    background-color: #0766F0;
+}
+
+.post-team .badge {
+    background-color: #DC5E53;
+}
+
+.post-news .badge {
+    background-color: #98DC62;
+}
+
+.badge:hover {
+    color: #FFF;
+    text-decoration: none;
+    background-color: rgb(51, 51, 51);
+}
+
+.meta {
+    font-size: 0.7rem;
+    margin: 1rem 0;
+}
+
+.meta-icon {
+    width: 1.4rem;
+    margin-right: 0.5rem;
+}
+
+.meta-date {
+    color: grey;
+}
+
+.post-title {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.post-read {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* BONUS : fixation de Nicole */
+
+.left-section {
+    /* On fixe la partie gauche de la structure afin qu'elle reste collée à l'écran lors du scroll */
+    position: fixed;
+    height: 100vh;
+}
+
+.right-section {
+    /* La partie de gauche étant "sortie du flux", elle n'existe plus pour les balises voisines. La partie de droite va donc s'aligner automatiquement à gauche.
+    Pour compenser cet effet, on lui applique une marge de gauche égale à la taille de la partie Nicole qui vient de "disparaître" */
+    margin-left: 50%;
+}
